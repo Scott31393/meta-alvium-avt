@@ -1,0 +1,30 @@
+From 826a652b5eb4648a4f960b949dbb7e5fd5d76833 Mon Sep 17 00:00:00 2001
+From: Tommaso Merciai <tomm.merciai@gmail.com>
+Date: Wed, 25 Jan 2023 09:15:29 +0100
+Subject: [PATCH] arm64: dts: imx8mp: add support for alvium camera sensors on
+ imx8mpevk
+
+Alliedvision provide hw camera sensors for imx8mp evk. We introduce
+2 new dtb to manage camera sensor stuff into NXP evk based on imx8mp
+SOC
+
+Signed-off-by: Tommaso Merciai <tomm.merciai@gmail.com>
+---
+ arch/arm64/boot/dts/freescale/Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm64/boot/dts/freescale/Makefile b/arch/arm64/boot/dts/freescale/Makefile
+index 9a7319c6b4e3..4ed4c46d3da8 100644
+--- a/arch/arm64/boot/dts/freescale/Makefile
++++ b/arch/arm64/boot/dts/freescale/Makefile
+@@ -116,6 +116,7 @@ dtb-$(CONFIG_ARCH_MXC) += imx8mp-evk.dtb imx8mp-evk-rm67191.dtb imx8mp-evk-it626
+ 			  imx8mp-evk-usdhc1-m2.dtb imx8mp-evk-rm67199.dtb \
+ 			  imx8mp-evk-dpdk.dtb imx8mp-evk-8mic-swpdm.dtb imx8mp-evk-rpmsg-lpv.dtb imx8mp-evk-revA3-8mic-revE.dtb
+ dtb-$(CONFIG_ARCH_MXC) += imx8mp-phyboard-pollux-rdk.dtb
++dtb-$(CONFIG_ARCH_MXC) += imx8mp-evk-alvium.dtb imx8mp-evk-alvium-fpdlink.dtb
+ dtb-$(CONFIG_ARCH_MXC) += imx8mq-evk.dtb imx8mq-evk-rpmsg.dtb imx8mp-ab2.dtb
+ dtb-$(CONFIG_ARCH_MXC) += imx8mp-ddr4-evk.dtb
+ dtb-$(CONFIG_ARCH_MXC) += imx8mp-evk-ndm.dtb
+-- 
+2.34.1
+
